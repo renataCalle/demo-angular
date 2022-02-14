@@ -1,0 +1,20 @@
+<h2>My Results</h2>
+<ul class="results">
+    <li *ngFor="let result of results">
+        <button [class.selected]="result === selectedResult" type="button" (click)="onSelect(result)">
+            <span class="name">{{result.name}}</span>
+            <span class="badge">{{result.id}}</span>
+            </button>
+    </li>
+</ul>
+
+<div *ngIf="selectedResult">
+
+    <h2>{{selectedResult.name | uppercase}} Details</h2>
+    <div>id: {{selectedResult.id}}</div>
+
+    <div>
+      <label for="hero-name">Description:       {{selectedResult.description}} </label>
+    </div>
+  
+</div>

@@ -1,0 +1,1 @@
+declare module "dynamic-form.component" // e.g declare module 'react-leaflet'
